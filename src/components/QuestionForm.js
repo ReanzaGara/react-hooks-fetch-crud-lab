@@ -17,8 +17,8 @@ function QuestionForm(props) {
     });
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     fetch("http://localhost:4000/questions", {
       method: "POST",
       headers: {
@@ -35,7 +35,6 @@ function QuestionForm(props) {
         correctIndex: parseInt(formData.correctIndex),
       }),
     });
-    alert("New Question has been successfully added ! ")
   }
 
   return (
